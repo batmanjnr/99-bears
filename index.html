@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bear.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand">99 Bottles of Beer</div>
+        <ul class="navbar-menu">
+            <li><a href="#display">Lyrics</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/99_Bottles_of_Beer" target="_blank">About</a></li>
+        </ul>
+    </nav>
+    <main class="main-content">
+        <section class="intro">
+            <h1>99 Bottles of Beer Song</h1>
+        </section>
+        <div id="display" class="lyrics"></div>
+    </main>
+    <button id="scrollTopBtn" title="Scroll to top">&#8679;</button>
+    <script src="./bears.js"></script>
+    <script>
+        // Show/hide button on scroll
+        const scrollBtn = document.getElementById('scrollTopBtn');
+        window.onscroll = function () {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                scrollBtn.style.display = "block";
+            } else {
+                scrollBtn.style.display = "none";
+            }
+        };
+        // Scroll to top on click
+        scrollBtn.onclick = function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+    </script>
+</body>
+
+</html>
